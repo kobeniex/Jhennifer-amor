@@ -1,0 +1,494 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+<title>Para Jhennifer, com amor 💗</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@500;700&family=Great+Vibes&family=Quicksand:wght@400;500;600;700&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --rosa-bebe:#ffe1ec;
+    --rosa-suave:#ffc9dd;
+    --rosa-medio:#ff9ecb;
+    --rosa-shock:#ff4fa3;
+    --rosa-forte:#ff2e8f;
+    --branco:#fffafc;
+    --texto:#a0154e;
+  }
+
+  *{ box-sizing:border-box; -webkit-tap-highlight-color: transparent; }
+
+  html,body{
+    margin:0; padding:0;
+    min-height:100%;
+    background: linear-gradient(180deg, var(--rosa-bebe) 0%, #ffd3e6 40%, var(--rosa-suave) 100%);
+    font-family:'Quicksand', sans-serif;
+    color:var(--texto);
+    overflow-x:hidden;
+  }
+
+  .app{
+    max-width:430px;
+    margin:0 auto;
+    position:relative;
+    min-height:100vh;
+    padding:28px 20px 60px;
+    overflow:hidden;
+  }
+
+  /* ---------- CORAÇÕES FLUTUANTES DE FUNDO ---------- */
+  #hearts-bg{
+    position:fixed;
+    inset:0;
+    max-width:430px;
+    margin:0 auto;
+    pointer-events:none;
+    overflow:hidden;
+    z-index:0;
+  }
+  .bg-heart{
+    position:absolute;
+    top:-40px;
+    font-size:22px;
+    opacity:0.75;
+    animation-name: cair;
+    animation-timing-function: linear;
+    animation-iteration-count: infinite;
+    filter: drop-shadow(0 0 2px rgba(255,255,255,0.6));
+  }
+  @keyframes cair{
+    0%{ transform: translateY(-5vh) translateX(0) rotate(0deg); }
+    100%{ transform: translateY(105vh) translateX(20px) rotate(360deg); }
+  }
+
+  /* ---------- CONTEÚDO ---------- */
+  .conteudo{ position:relative; z-index:1; }
+
+  .laço{
+    width:70px; margin:0 auto 6px;
+    display:block;
+  }
+
+  .titulo-principal{
+    text-align:center;
+    font-family:'Great Vibes', cursive;
+    font-size:2.6rem;
+    color:var(--rosa-forte);
+    margin:6px 0 0;
+    text-shadow: 1px 1px 0px #fff;
+  }
+
+  .subtitulo{
+    text-align:center;
+    font-size:0.95rem;
+    color:var(--texto);
+    margin-top:2px;
+    letter-spacing:0.5px;
+  }
+
+  .cartao-frase{
+    background: var(--branco);
+    border-radius: 26px;
+    padding: 26px 18px;
+    margin: 26px 0;
+    text-align:center;
+    box-shadow: 0 10px 25px rgba(255,79,163,0.25);
+    border: 3px solid var(--rosa-suave);
+    position:relative;
+  }
+  .cartao-frase::before{
+    content:"🎀";
+    position:absolute;
+    top:-18px; left:50%;
+    transform: translateX(-50%);
+    font-size:28px;
+  }
+  .frase-destaque{
+    font-family:'Dancing Script', cursive;
+    font-weight:700;
+    font-size:1.9rem;
+    color: var(--rosa-shock);
+    margin:8px 0;
+    line-height:1.3;
+  }
+
+  .frase-destaque.dois{
+    font-size:1.6rem;
+    color:var(--rosa-forte);
+  }
+
+  .divisor-coracoes{
+    text-align:center;
+    font-size:1.2rem;
+    letter-spacing:10px;
+    margin:18px 0;
+    color: var(--rosa-medio);
+  }
+
+  /* ---------- CARTA ---------- */
+  .carta{
+    background: linear-gradient(180deg,#fff 0%, var(--rosa-bebe) 100%);
+    border-radius: 24px;
+    padding: 24px 20px 22px;
+    box-shadow: 0 12px 30px rgba(255,46,143,0.22);
+    border: 2px dashed var(--rosa-medio);
+    margin-bottom: 30px;
+  }
+  .carta h3{
+    font-family:'Dancing Script', cursive;
+    font-size:1.6rem;
+    color:var(--rosa-forte);
+    margin:0 0 12px;
+    text-align:center;
+  }
+  .carta p{
+    font-size:0.98rem;
+    line-height:1.7;
+    margin:0 0 12px;
+    color:#7a1140;
+  }
+  .carta .assinatura{
+    text-align:right;
+    font-family:'Great Vibes', cursive;
+    font-size:1.6rem;
+    color: var(--rosa-shock);
+    margin-top:6px;
+  }
+
+  /* ---------- GALERIA DE FOTOS ---------- */
+  .titulo-secao{
+    text-align:center;
+    font-family:'Dancing Script', cursive;
+    font-size:1.7rem;
+    color:var(--rosa-forte);
+    margin: 10px 0 18px;
+  }
+
+  .cena-casal{
+    position:relative;
+    text-align:center;
+    margin-bottom: 30px;
+    padding: 20px 0 10px;
+  }
+
+  .mascote{
+    display:inline-block;
+    width: 38%;
+    max-width:135px;
+    vertical-align:middle;
+    animation: pular 1.8s ease-in-out infinite;
+  }
+  .mascote.gatinho{ animation-delay: 0s; }
+  .mascote.cachorrinho{ animation-delay: 0.3s; }
+
+  @keyframes pular{
+    0%,100%{ transform: translateY(0) rotate(-3deg); }
+    50%{ transform: translateY(-10px) rotate(3deg); }
+  }
+
+  .coracao-batendo{
+    display:inline-block;
+    vertical-align:middle;
+    font-size:1.8rem;
+    margin: 0 4px;
+    animation: bater 0.9s ease-in-out infinite;
+  }
+  @keyframes bater{
+    0%,100%{ transform: scale(1); }
+    50%{ transform: scale(1.35); }
+  }
+
+  .mini-corações{
+    position:absolute;
+    inset:0;
+    pointer-events:none;
+    overflow:visible;
+  }
+  .mini-coracao{
+    position:absolute;
+    bottom:20px;
+    font-size:16px;
+    opacity:0.9;
+    animation-name: subir-sumir;
+    animation-timing-function: ease-out;
+    animation-fill-mode: forwards;
+  }
+  @keyframes subir-sumir{
+    0%{ transform: translateY(0) scale(0.6); opacity:0.9; }
+    100%{ transform: translateY(-90px) scale(1.1); opacity:0; }
+  }
+
+  .brilhos{
+    margin-top: 6px;
+  }
+  .brilhos span{
+    display:inline-block;
+    font-size:1rem;
+    margin: 0 6px;
+    animation: brilhar 1.6s ease-in-out infinite;
+  }
+  .brilhos span:nth-child(2){ animation-delay:0.3s; }
+  .brilhos span:nth-child(3){ animation-delay:0.6s; }
+  .brilhos span:nth-child(4){ animation-delay:0.9s; }
+  @keyframes brilhar{
+    0%,100%{ opacity:0.3; transform: scale(0.8); }
+    50%{ opacity:1; transform: scale(1.2); }
+  }
+  .balao-fala{
+    position:relative;
+    display:inline-block;
+    max-width: 260px;
+    margin: 18px auto 0;
+    background:#fff;
+    border:3px solid var(--rosa-shock);
+    border-radius: 22px;
+    padding: 14px 18px;
+    font-family:'Dancing Script', cursive;
+    font-size:1.3rem;
+    color: var(--rosa-forte);
+    line-height:1.35;
+  }
+  .balao-fala::after{
+    content:"";
+    position:absolute;
+    top:-14px;
+    left:50%;
+    transform: translateX(-50%);
+    border-width: 0 10px 14px 10px;
+    border-style: solid;
+    border-color: transparent transparent var(--rosa-shock) transparent;
+  }
+
+  /* ---------- BOTÃO INTERATIVO ---------- */
+  .botao-container{
+    text-align:center;
+    margin: 20px 0 10px;
+  }
+
+  #botao-surpresa{
+    background: linear-gradient(135deg, var(--rosa-shock), var(--rosa-forte));
+    color:#fff;
+    border:none;
+    padding:18px 26px;
+    font-size:1.1rem;
+    font-weight:700;
+    border-radius: 50px;
+    box-shadow: 0 8px 20px rgba(255,46,143,0.45);
+    font-family:'Quicksand', sans-serif;
+    cursor:pointer;
+    animation: pulsar 1.6s infinite;
+    width: 90%;
+    max-width: 320px;
+  }
+  @keyframes pulsar{
+    0%,100%{ transform: scale(1); }
+    50%{ transform: scale(1.05); }
+  }
+
+  .mensagem-surpresa{
+    max-height:0;
+    overflow:hidden;
+    opacity:0;
+    transition: all 0.6s ease;
+    text-align:center;
+    margin-top: 18px;
+  }
+  .mensagem-surpresa.aberta{
+    max-height:400px;
+    opacity:1;
+  }
+  .mensagem-surpresa .caixinha{
+    background:#fff;
+    border:3px solid var(--rosa-shock);
+    border-radius:22px;
+    padding:22px 18px;
+    box-shadow: 0 10px 26px rgba(255,79,163,0.35);
+  }
+  .mensagem-surpresa .caixinha p{
+    font-family:'Dancing Script', cursive;
+    font-size:1.5rem;
+    color: var(--rosa-forte);
+    margin:0;
+    line-height:1.5;
+  }
+
+  footer{
+    text-align:center;
+    margin-top: 30px;
+    font-size:0.85rem;
+    color: var(--rosa-medio);
+  }
+
+  /* Explosão de corações do clique */
+  .heart-pop{
+    position:fixed;
+    z-index:50;
+    pointer-events:none;
+    font-size:24px;
+    animation: pop-anim 1.1s ease-out forwards;
+  }
+  @keyframes pop-anim{
+    0%{ transform: translate(0,0) scale(0.4); opacity:1; }
+    100%{ transform: translate(var(--dx), var(--dy)) scale(1.3); opacity:0; }
+  }
+</style>
+</head>
+<body>
+
+<div id="hearts-bg"></div>
+
+<div class="app">
+  <div class="conteudo">
+
+    <svg class="laço" viewBox="0 0 100 60" xmlns="http://www.w3.org/2000/svg">
+      <path d="M50 30 C30 0, 0 10, 15 30 C0 50, 30 60, 50 30 Z" fill="#ff9ecb"/>
+      <path d="M50 30 C70 0, 100 10, 85 30 C100 50, 70 60, 50 30 Z" fill="#ff9ecb"/>
+      <circle cx="50" cy="30" r="10" fill="#ff4fa3"/>
+    </svg>
+
+    <h1 class="titulo-principal">eu te amo muito amor</h1>
+    <p class="subtitulo">uma pequena surpresa só pra você, Jhennifer</p>
+
+    <div class="divisor-coracoes">💗 🎀 💗</div>
+
+    <div class="cartao-frase">
+      <p class="frase-destaque dois">você é tudo pra mim Jhennifer</p>
+    </div>
+
+    <h2 class="titulo-secao">carta pra você</h2>
+    <div class="carta">
+      <h3>Meu amor,</h3>
+      <p>Cada dia ao seu lado é como ganhar um presente novo. Seu sorriso ilumina meus dias mais cinzentos, e seu carinho é o lugar mais seguro que eu conheço.</p>
+      <p>Obrigado por existir, por ser exatamente quem você é e por dividir a sua vida comigo. Eu te escolho hoje, amanhã e sempre.</p>
+      <p>Você não é só o meu amor... você é o meu lar.</p>
+      <div class="assinatura">com todo carinho, seu amor</div>
+    </div>
+
+    <h2 class="titulo-secao">meu amorzinho</h2>
+    <div class="cena-casal">
+      <div class="mini-corações" id="mini-coracoes"></div>
+
+      <div class="mascote gatinho">
+        <svg viewBox="0 0 120 110" xmlns="http://www.w3.org/2000/svg">
+          <path d="M25 35 L10 5 L45 25 Z" fill="#fff" stroke="#ffb6d5" stroke-width="3"/>
+          <path d="M95 35 L110 5 L75 25 Z" fill="#fff" stroke="#ffb6d5" stroke-width="3"/>
+          <ellipse cx="60" cy="60" rx="48" ry="42" fill="#fff" stroke="#ffb6d5" stroke-width="3"/>
+          <line x1="8" y1="55" x2="35" y2="58" stroke="#f7a8c9" stroke-width="2"/>
+          <line x1="8" y1="65" x2="35" y2="65" stroke="#f7a8c9" stroke-width="2"/>
+          <line x1="85" y1="58" x2="112" y2="55" stroke="#f7a8c9" stroke-width="2"/>
+          <line x1="85" y1="65" x2="112" y2="65" stroke="#f7a8c9" stroke-width="2"/>
+          <circle cx="42" cy="58" r="4" fill="#a0154e"/>
+          <circle cx="78" cy="58" r="4" fill="#a0154e"/>
+          <ellipse cx="60" cy="70" rx="5" ry="3.5" fill="#ff9ecb"/>
+          <path d="M60 30 C50 18, 34 22, 42 34 C34 44, 50 46, 60 34 Z" fill="#ff4fa3"/>
+          <path d="M60 30 C70 18, 86 22, 78 34 C86 44, 70 46, 60 34 Z" fill="#ff4fa3"/>
+          <circle cx="60" cy="32" r="5" fill="#ff2e8f"/>
+        </svg>
+      </div>
+
+      <div class="coracao-batendo">💗</div>
+
+      <div class="mascote cachorrinho">
+        <svg viewBox="0 0 120 110" xmlns="http://www.w3.org/2000/svg">
+          <path d="M25 40 C5 45, 5 75, 28 78 C20 60, 22 48, 25 40 Z" fill="#2b2b2b"/>
+          <path d="M95 40 C115 45, 115 75, 92 78 C100 60, 98 48, 95 40 Z" fill="#fff" stroke="#e8c9a0" stroke-width="2"/>
+          <ellipse cx="60" cy="58" rx="46" ry="40" fill="#fff" stroke="#e8c9a0" stroke-width="3"/>
+          <ellipse cx="60" cy="72" rx="20" ry="14" fill="#fff" stroke="#e8c9a0" stroke-width="2"/>
+          <path d="M40 55 Q46 48 52 55" stroke="#2b2b2b" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <path d="M68 55 Q74 48 80 55" stroke="#2b2b2b" stroke-width="3" fill="none" stroke-linecap="round"/>
+          <ellipse cx="60" cy="68" rx="6" ry="4.5" fill="#2b2b2b"/>
+          <path d="M52 76 Q60 82 68 76" stroke="#2b2b2b" stroke-width="2" fill="none" stroke-linecap="round"/>
+          <path d="M30 88 Q60 98 90 88" stroke="#ff4fa3" stroke-width="6" fill="none" stroke-linecap="round"/>
+          <circle cx="60" cy="95" r="4" fill="#ff2e8f"/>
+        </svg>
+      </div>
+
+      <div class="brilhos">
+        <span>✨</span><span>✨</span><span>✨</span><span>✨</span>
+      </div>
+
+      <div class="balao-fala">
+        não deixo um segundo de pensar em você
+      </div>
+    </div>
+
+    <div class="botao-container">
+      <button id="botao-surpresa">Clique aqui, meu amor</button>
+      <div class="mensagem-surpresa" id="mensagem-surpresa">
+        <div class="caixinha">
+          <p>Você é o motivo do meu sorriso todos os dias.<br>Eu te amo infinitamente, Jhennifer.</p>
+        </div>
+      </div>
+    </div>
+
+    <footer>feito com carinho especialmente para você</footer>
+  </div>
+</div>
+
+<script>
+  // ---------- Mini corações subindo entre os mascotes ----------
+  const containerMini = document.getElementById('mini-coracoes');
+  const miniSimbolos = ['💗','💖','💕'];
+
+  function criarMiniCoracao() {
+    const c = document.createElement('div');
+    c.className = 'mini-coracao';
+    c.textContent = miniSimbolos[Math.floor(Math.random() * miniSimbolos.length)];
+    c.style.left = (40 + Math.random() * 20) + '%';
+    c.style.animationDuration = (1.6 + Math.random()) + 's';
+    containerMini.appendChild(c);
+    setTimeout(() => c.remove(), 2800);
+  }
+  setInterval(criarMiniCoracao, 500);
+
+  // ---------- Corações caindo no fundo ----------
+  const bg = document.getElementById('hearts-bg');
+  const simbolos = ['💗','💖','🎀','💕','💓'];
+  const totalCoracoes = 18;
+
+  for (let i = 0; i < totalCoracoes; i++) {
+    const h = document.createElement('div');
+    h.className = 'bg-heart';
+    h.textContent = simbolos[Math.floor(Math.random() * simbolos.length)];
+    h.style.left = Math.random() * 100 + '%';
+    const duracao = 6 + Math.random() * 8;
+    h.style.animationDuration = duracao + 's';
+    h.style.animationDelay = (Math.random() * 10) + 's';
+    h.style.fontSize = (16 + Math.random() * 16) + 'px';
+    bg.appendChild(h);
+  }
+
+  // ---------- Botão de surpresa ----------
+  const botao = document.getElementById('botao-surpresa');
+  const mensagem = document.getElementById('mensagem-surpresa');
+
+  botao.addEventListener('click', (e) => {
+    mensagem.classList.toggle('aberta');
+    explodirCoracoes(e.clientX, e.clientY);
+    if (mensagem.classList.contains('aberta')) {
+      mensagem.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    }
+  });
+
+  function explodirCoracoes(x, y) {
+    const emojis = ['💗','💖','🎀','💕','✨'];
+    for (let i = 0; i < 16; i++) {
+      const p = document.createElement('div');
+      p.className = 'heart-pop';
+      p.textContent = emojis[Math.floor(Math.random() * emojis.length)];
+      p.style.left = x + 'px';
+      p.style.top = y + 'px';
+      const angulo = Math.random() * Math.PI * 2;
+      const distancia = 60 + Math.random() * 90;
+      p.style.setProperty('--dx', Math.cos(angulo) * distancia + 'px');
+      p.style.setProperty('--dy', Math.sin(angulo) * distancia + 'px');
+      document.body.appendChild(p);
+      setTimeout(() => p.remove(), 1100);
+    }
+  }
+</script>
+
+</body>
+</html>
